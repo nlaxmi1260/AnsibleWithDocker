@@ -1,0 +1,4 @@
+---
+# roles/nginx/defaults/main.yml
+
+nginx_service_name: nginx

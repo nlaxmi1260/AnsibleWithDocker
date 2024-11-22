@@ -1,0 +1,8 @@
+---
+# roles/nginx/tasks/main.yml
+
+- name: Install Nginx
+  package:
+    name: nginx
+    state: present
+  notify: Nginx installation completed

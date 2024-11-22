@@ -1,0 +1,14 @@
+---
+
+- name: testing connection
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: ping all hosts
+      ping:
+      register: result
+
+    - name: Print the result
+      debug:
+        var: result
+        

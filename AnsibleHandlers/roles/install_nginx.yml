@@ -1,0 +1,10 @@
+---
+# install_nginx.yml
+
+- hosts: all
+  become: yes
+  become_method: sudo
+  become_user: demouser
+  become_password: demouser
+  roles:
+    - nginx
