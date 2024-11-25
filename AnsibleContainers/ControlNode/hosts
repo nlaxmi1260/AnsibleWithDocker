@@ -2,3 +2,4 @@
 172.18.0.3 ansible_ssh_private_key_file=ansible-ssh ansible_user=ansibleuser
 172.18.0.4 ansible_ssh_private_key_file=ansible-ssh ansible_user=ansibleuser
 172.18.0.5 ansible_ssh_private_key_file=ansible-ssh ansible_user=ansibleuser
+13.233.150.115 ansible_ssh_private_key_file=MyLinuxkey.pem ansible_user=ansibleuser

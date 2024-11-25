@@ -37,6 +37,7 @@ RUN mkdir /etc/ansible
 # COPY hosts.ini /ansible/hosts.ini
 # COPY playbooks/ /ansible/playbooks/
 COPY ansible-ssh /ansible-ssh 
+COPY MyLinuxKey.pem /MyLinuxKey.pem
 # COPY ansible-ssh.pub /ansible-ssh.pub 
 # Copying host file to ansible default host location
 COPY hosts /etc/ansible/hosts
