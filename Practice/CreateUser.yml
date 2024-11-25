@@ -1,0 +1,19 @@
+---
+- name: create user name naga
+  hosts: all
+  become: true
+
+  tasks:
+    - name: create user
+      user:
+        name: naga
+        state: present
+
+    - name: add to a group
+      user:
+        name: naga
+        groups: sudo
+
+ # $ getent group ->to know list of groups on ubuntu  
+ # $ getent group sudo -> to know list of users belong to sudo group
+     

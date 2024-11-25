@@ -1,0 +1,16 @@
+---
+- name: Loops example in ansibleplaybook
+  hosts: all
+  become: true
+
+  vars:
+    fruits:
+      - banana
+      - mango
+      - apple
+
+  tasks:
+    - name: looping through fruits
+      debug:
+        msg: "{{ item }}"
+      with_items: "{{ fruits }}"

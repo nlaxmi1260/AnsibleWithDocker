@@ -1,0 +1,16 @@
+---
+- name: git present
+  hosts: all
+  become: true
+  tasks:
+    - name: Check git on "Redhat"
+      yum:
+        name: git
+        state: present
+      when: ansible_os_family == "Redhat"
+
+    - name: Check git on Debian
+      apt: 
+        name: git
+        state: present
+      when: ansible_os_family == "Debian"
