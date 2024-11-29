@@ -1,0 +1,7 @@
+---
+
+- name: install tree
+  apt:
+    name: tree
+    state: absent
+  tags: tree

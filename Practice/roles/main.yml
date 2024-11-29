@@ -1,0 +1,8 @@
+---
+- name: crete roles
+  hosts: all
+  become: true
+  roles:
+    - tree-role
+    - apache2-role
+    - git-role
