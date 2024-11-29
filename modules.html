@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible modules</title>
+</head>
+<body>
+    <h2>Ansible Modules</h2>
+    <ol>
+        <li> 
+            <code>
+                <b> copy </b>:Copy files from source location to destination location   <br>
+                &nbsp; &nbsp;src: index.html <br>
+                &nbsp; &nbsp;dest: /var/www/html/index.html <br>
+            </code>
+        </li>
+        <li> 
+            <code>
+                <b> service </b>:TO restart a service <br>
+                &nbsp; &nbsp;name: name of a service(httpd)<br>
+                &nbsp; &nbsp;state: started<br>
+                &nbsp; &nbsp; enabled: yes
+            </code>
+        </li>
+        <li>
+            <code>
+                <b>user: To create a user 
+                    </b><br>
+                    &nbsp;&nbsp;name: naga <br>
+                    &nbsp;&nbsp;state: present <br>
+            </code>
+        </li>
+        <li>
+            <code>
+                <b>user: To create a group 
+                    </b><br>
+                    &nbsp;&nbsp;name: wheel (group name) <br>
+                    &nbsp;&nbsp;state: present <br>
+            </code>
+        </li>
+        <li>
+            <code>
+                <b>user: To add user to a group
+                    </b><br>
+                    &nbsp;&nbsp;name: naga <br>
+                    &nbsp;&nbsp;group: present <br>
+                    getent group ->to know list of groups on ubuntu <br>
+                    getent group sudo -> to know list of users belong to sudo group <br>
+            </code>
+        </li>
+        <li>
+            <code>
+            <b>debug:looping through list of items</b> <br>
+            &nbsp;&nbsp; msg: "{{ item }}" <br>
+            &nbsp;&nbsp; with_items: "{{ fruits }}" <br>
+           </code>
+         </li>
+         <li>
+            <code>
+            <b>debug:</b> <br>
+            &nbsp;&nbsp; var: version <br>
+           </code>
+         </li>
+         <li>
+            <code>
+                <b>apt: To install any software on ubuntu 
+                    </b><br>
+                    &nbsp;&nbsp;name: s/w name(git) <br>
+                    &nbsp;&nbsp;state: present <br>
+                    &nbsp;&nbsp; when: ansible_os_family == 'Debian'
+            </code>
+        </li>
+        <li>
+            <code>
+                <b>yum: To install any software on celtos
+                    </b><br>
+                    &nbsp;&nbsp;name: s/w name(git) <br>
+                    &nbsp;&nbsp;state: present <br>
+                    &nbsp; &nbsp;when: ansible_os_family == 'RedHat'
+            </code>
+        </li>
+      
+    </ol>
+</body>
+</html>

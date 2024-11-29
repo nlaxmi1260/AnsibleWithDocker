@@ -1,0 +1,12 @@
+---
+name: "naga"
+spouse: "mallikarjun"
+children:
+  - name: dinesh
+    age: 9
+    gender: male
+  - name: gagana
+    age: 6
+    gender: female
+
+  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible Variables</title>
+    <style>
+        ol>li{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Ansible Variables</h2>
+    <ol>
+        <li>Variables declaration  <br>
+            vars: <br>
+            &nbsp;&nbsp; package_name: docker.io <br>
+            &nbsp;&nbsp; is_useful: true <br>
+            &nbsp;&nbsp; age: 35 <br>
+            &nbsp;&nbsp; fruits:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- apple <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- orange <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- mango <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- pineapple <br>
+            &nbsp;&nbsp; members: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; mallikarjun: husband <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; dinesh: son <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; gagana: daughter <br>
+        </li>
+        <li>Accessing variables <br>
+            {{ package_name }} <br>
+            {{ fruits }} <br>
+            {{ fruits[1] }} <br>
+            {{ members }} <br>
+            {{ members.mallikarjun }} <br>
+            {{ age }} <br>
+        </li>
+        <li>
+            Variable file reference in main playbook <br>
+            vars_files: <br>
+            &nbsp;&nbsp; - filename.yml
+        </li>
+        <li>In Variable file there should not be vars: section  <br>
+         name: naga <br>
+         age: 35 <br>
+        </li>
+        <li>Providing variable value at runtime <br>
+            ansible-playbook /workingdir/Practice/Variables/jinja2.yml --extra-vars '{"version":"1.0"}' <br>
+        </li>
+        <li>Providing variable file at runtime <br>
+            ansible-playbook /workingdir/Practice/Variables/jinja2.yml --extra-vars '@myvars.yml' <br>
+        </li>
+        <li>precedence variable given at runtime will get the heighest precedence <br>
+        $  ansible-playbook /workingdir/Practice/Variables/jinja2.yml --extra-vars '{"version":"1.0","another_var":"runtime value"}'
+    </li>
+    </ol>
+
+</body>
+</html>
