@@ -1,0 +1,1 @@
+Hi my name is naga , studying ansible for configuring managed nodes.

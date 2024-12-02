@@ -1,0 +1,7 @@
+---
+- name: crete roles
+  hosts: all
+  become: true
+  roles:
+    - AnsibleRole
+  
