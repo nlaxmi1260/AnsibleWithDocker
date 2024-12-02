@@ -40,7 +40,7 @@
     - name: print boolean variables
       debug:
         msg: "boolean  value is: {{ boolean }}"
-    - name: print boolean variables
+    - name: print boolean variables with when condition
       debug:
         msg: "boolean  value is: {{ is_enabled }}"
       when: is_enabled
@@ -82,3 +82,9 @@
     - name: Get the value of apple from the nested variable
       debug:
         var: fruits[market[0].fruit[1]]
+
+    - name: print task level variable
+      vars:
+        task_var: "this is task level value"
+      debug:
+        msg: "task value {{ task_var }}"

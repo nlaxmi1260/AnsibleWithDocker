@@ -55,7 +55,21 @@
         </li>
         <li>precedence variable given at runtime will get the heighest precedence <br>
         $  ansible-playbook /workingdir/Practice/Variables/jinja2.yml --extra-vars '{"version":"1.0","another_var":"runtime value"}'
-    </li>
+        </li>
+        <li><b>Environment Variables</b>: like $Home,$user ,$path</li>
+        <li>Environment variable declaration <br>
+            <code>
+                environment: <br>
+            &nbsp;&nbsp;HOME: /home/mreddy <br>
+            &nbsp;&nbsp;USER: mreddy <br>
+            &nbsp;&nbsp;PATH: /usr/local/bin:/usr/bin:/bin
+            </code>
+        </li>
+        <li>environment variables can be declared at playbook level or task level. Environment variables at playbook level can be accessed by all tasks.Task level environment variables are limited to the task.</li>
+        <li>Environment variables are accessed with $VARNAME</li>
+        <li>variables are accessed with {{ varname }} </li>
+        <li>Normal variables are also can be declared at playbook level and task level.</li>
+
     </ol>
 
 </body>

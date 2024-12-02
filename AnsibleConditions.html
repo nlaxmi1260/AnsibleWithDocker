@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible Conditions</title>
+</head>
+<body>
+    <h2> Ansible Conditions </h2>
+    <ol>
+        <li>In Ansible conditions are defined with <b>when </b> keyword.</li>
+        <li> In Ansible we can give multiple conditions as list <br>
+            when: <br>
+                &nbsp;&nbsp;- ansible_os_family == "RedHat" <br>
+                &nbsp;&nbsp;- ansible_distribution_version == "7" <br>
+        </li>
+        <li> In Ansible we can give muliple conditions with <b> and </b> keyword
+            <code>
+                when: <br>
+                &nbsp;&nbsp;- ansible_os_family == "RedHat" and ansible_distribution_version == "7" <br>
+            </code>
+        </li>
+        <li>In Ansible we can give condition with loop <br>
+            <code>
+                when: <br>
+                &nbsp;&nbsp;- item == "apple" <br>
+                &nbsp;&nbsp;loop: <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;- apple <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;- orange <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;- banana <br>
+            </code>
+        </li>
+        <li>Ansible facts  are the facts about managed nodes<br>
+
+        </li>
+    </ol>
+</body>
+</html>
